@@ -28,6 +28,6 @@ def operate_on_file(filename, *, errors='warn'):
                 else:
                     pass                 # Just Ignore the errors
                 continue
-    print('Total Score:', row[5] + row[6] + row[7])
+    print('Total Marks for all Students in all subjects:', row[5] + row[6] + row[7])
 
 operate_on_file(filename, errors='silent') # It makes it more readable

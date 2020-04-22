@@ -27,6 +27,6 @@ def operate_on_file(filename):
                 print ('Row no: ', rowno, 'Bad row: ', row)
                 print ('Row no: ', rowno, 'Reason: ', e)
                 continue
-    print('Total Score:', row[5] + row[6] + row[7])
+    print('Total Marks for all Students in all subjects:', row[5] + row[6] + row[7])
 
 operate_on_file(filename)
