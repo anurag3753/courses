@@ -1,0 +1,23 @@
+1. !!   :- This is used to run the last command
+        :- Ex. 
+            apt-get install pyyaml      [ without sudo ]. If it turns out that u need to run this with sudo, you can do sth like
+            sudo !!
+
+2. Difference b/w sh and .
+    - sh file executes a shell-script file in a new shell process.
+        Ex. If you execute `sh test.sh` :- you'd launch a new shell, then define a new variable inside it, then exit.
+            The variable used inside test will not set in the outer shell.
+
+    - . file executes a shell-script file in the current shell process.
+        Ex. If you execute `sh test.sh` :- you'd execute the script using the current shell. The result of test
+            will be accessible in the current shell.
+
+    - ./file will execute the file in the current directory. The file needs to have the executable flag set.
+        Ex. If you launch it using ./test.sh, the first line `#!/bin/sh` would be detected , then it would be exactly as 
+        if you wrote
+                        /bin/sh ./test.sh
+        which in this case boils down to the first scenario. But if the hashbang line was, for example,
+
+                        #!/usr/bin/python
+
+        the file would have been executed with `/usr/bin/python ./test.sh`
