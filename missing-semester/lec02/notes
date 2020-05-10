@@ -1,0 +1,50 @@
+1. You can define strings using double quotes and single quotes. But they are not the same thing
+2. Difference b/w source and ./ a file
+    - sourcing the script will execute the script from top to bottom and will bring all the variables defined
+      in the script in the shell terminal.
+    - Whereas ./ will execute it as an independent unit. and no variable becomes a part of the shell terminal
+
+3. Get the output os ls from current and parent directory together:-
+    - cat <(ls .) <(ls ..)
+
+4. grep -i "search_string" "filename"
+
+5. Purpose of > /dev/null 
+    Ex.
+
+        grep "foobar" "some_file.txt" > /dev/null 2> /dev/null
+
+    Linux has one special device, to dump sth. It is called /dev/null. Now, in this case we are searching foobar in some_file,
+    then if it is not found, we are going to dump the stdout to the block device. By 2> means, dump stderr also to this device.
+
+    Check lecture at 15:00 for more details
+
+6. >> :- Is used to append to the file
+    > :- Overwrite the contents of the file
+
+7. Grouping :-
+        ls *{.py,.tcl}
+
+8. Compare folders :-
+        diff <(ls foo) <(ls bar)
+            < :- ` less than is used for things present in first folder only `
+            > :- ` greater than is used for things present in second folder only ` 
+
+9. find usages :-
+        find . -name "somefile" -type f
+        find . -name "somedir" -type d
+        find . -path '**/path/test/*.py' -type f           # ** -means some number of folders in the way, then we care about *.py
+        find . -mtime -1                                   # Last date modified files
+        find . -name "*tmp" -exec rm {} \;
+
+10. locate :- used in similar sprit as find .Often used in conjunction with updatedb [ to update the db index]
+
+11. grep -R <some_string> .  # searches the string in recursive manner from current location
+
+12. Search all the python files where `import os` is used
+        grep -R "import os"
+
+13. history 1 :- From the beggining
+    history 1 | grep convert
+
+14. Ctrl-r :- Keep hitting ctrl-r
