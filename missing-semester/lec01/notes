@@ -21,3 +21,21 @@
                         #!/usr/bin/python
 
         the file would have been executed with `/usr/bin/python ./test.sh`
+
+3. There is two terminology in shell. One is flag and other is options. With options you need to mention something, where as
+   with flags you do not need to mention anything
+   Ex. ls -ltr [ all the things are flags]
+       mkdir   [ it needs input from user]
+
+4. ! carries a special meaning, if used directly inside the shell
+
+5. Sudo usage :-
+    echo 3 | sudo tee brightness.txt
+
+6. tail is used to print last lines of an output
+
+7. grep -i `search_string`      # i is ignore-case
+
+8. If you are a root user, then your prompt looks like (#) . In rest cases ($)
+
+9. find . -type f -iname "brightness*"
